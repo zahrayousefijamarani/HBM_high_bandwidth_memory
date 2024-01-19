@@ -40,19 +40,23 @@ of HBM decreases the repairs the chip-to-chip connection failure, and provides p
 <img width="405" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/5b518bae-6039-451f-89f8-95a224fce885">
 
 ### Architecture:
-- The fundamental structure of HBM is composed of 4-Hi (high) core DRAM and base logic die at the bottom.
-- The core DRAM consists of two channels, where each channel has 1 Gb density with 128 I/Os and eight
-independent banks.
-- Each channel of core DRAM die has
-independent address and data TSV with point-to-point (P2P)
-connection, isolating the operation of every channel.
-- The power
-and ground of each channel are not isolated and have common
-plane
+- The fundamental structure of HBM is composed of 4-Hi (high) **core DRAM and base logic die** at the bottom.
+- The core DRAM consists of two channels, where each channel has 1 Gb density with 128 I/Os and eight independent banks.
+- Each channel of core DRAM die has independent address and data TSV with point-to-point (P2P) connection, isolating the operation of every channel.
+- The power and ground of each channel are not isolated and have common plane.
+<img width="647" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/093ff998-c3c2-47ad-a0f8-5cc07e473ff3">
+
+- Ballout area is located at the center as a blue rectangle. The size of the ballout is about 6 mm 3 mm.
+- **PHY (Physical layer)** located at the top of the die is for the **main interface between DRAM and memory controller**.
+- PHY has a total of eight channels where a channel consists of an AWORD and four channel-interleaved DWORD. A total of eight AWORD and 32 DWORD are located in the PHY area.
+- MBIST (Memory BIST) and IEEE1500, RTL-based circuit, for the purpose of reliability and testing is located at the bottom.
+
+  <img width="635" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/c158ab99-dc71-456e-b336-6bd40d6376ea">
 
 
 # Refrences:
-[1] Kim JS, Oh CS, Lee H, Lee D, Hwang HR, Hwang S, Na B, Moon J, Kim JG, Park H, Ryu JW. A 1.2 V 12.8 GB/s 2 Gb mobile wide-I/O DRAM with 4$\times $128 I/Os using TSV based stacking. IEEE Journal of Solid-State Circuits. 2011 Sep 23;47(1):107-16.
+[1] Kim JS, Oh CS, Lee H, Lee D, Hwang HR, Hwang S, Na B, Moon J, Kim JG, Park H, Ryu JW. A 1.2 V 12.8 GB/s 2 Gb mobile wide-I/O DRAM with 4x128 I/Os using TSV based stacking. IEEE Journal of Solid-State Circuits. 2011 Sep 23;47(1):107-16.
+
 [2] Lee DU, Kim KW, Kim KW, Lee KS, Byeon SJ, Kim JH, Cho JH, Lee J, Chun JH. A 1.2 V 8 Gb 8-channel 128 GB/s high-bandwidth memory (HBM) stacked DRAM with effective I/O test circuits. IEEE Journal of Solid-State Circuits. 2014 Oct 14;50(1):191-203.
 
 # Definitions:
