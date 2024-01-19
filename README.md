@@ -53,11 +53,65 @@ of HBM decreases the repairs the chip-to-chip connection failure, and provides p
 
   <img width="635" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/c158ab99-dc71-456e-b336-6bd40d6376ea">
 
+## Paper [3]: HBM-GEN2
+### Problems:
+
+higher bandwidth
+
+### Solutions:
+
+double the bandwidth from 128GB/s to more than 256GB/s
+
+support pseudo-channel mode and 8H stacks
+
+<img width="300" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/686fe140-1b2a-431d-8fdd-55dba6b53df7">
+<img width="374" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/5be90d5d-ad09-400f-a1ae-fc6a9d2688ac">
+
+
+### Architecture:
+- In the pseudo-channel
+- A legacy channel is divided into two pseudo channels and the two pseudo channels share the command-address pins. Thus, one HBM has 16 pseudo channels instead of 8 legacy channels.
+- In 4H/8H case the HBM is composed of two channels and each channel has two pseudo channels (PC0/PC1) which consists of 16 banks (4 bank-groups and 4banks per group).
+- In case of 2H, one pseudo channel is divided into two different channels and each channel has eight banks which is necessary to keep the same bandwidth as in 4H/8H case.
+
+  <img width="520" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/bdf4fc4c-11e9-46d1-91be-d88bd1c00579">
+
+
+
+
+## Paper [4]: HBM-PIM
+### Problems:
+
+ The energy consumption from interconnections limits the scaling of the system performance, because the on-chip interconnection is increased by the tremendous accelerator size and the power overhead is caused by DRAM bandwidth expansion.
+
+### Solutions:
+Processing-in-memory (PIM) architecture.
+
+<img width="571" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/28dec9b4-909b-40c3-93f0-49319192acfc">
+
+### Architectuure:
+- Embedding processing units into a logic base.
+- PIM core for the proposed PIM-HBM architecture is assumed to be a streaming multiprocessor (SM), which is a unit core of a graphics processing unit (GPU).
+  
+<img width="267" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/5ad6eb1a-31ab-4e51-8760-88e7b1ede0c1">
+<img width="468" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/4ad48aa6-104c-40f4-8b69-335eb069ba3c">
+
+### SM Architecture [5]:
+
+<img width="394" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/83a7b99c-d0ad-483a-9bf0-16553139e976">
+
+
 
 # Refrences:
 [1] Kim JS, Oh CS, Lee H, Lee D, Hwang HR, Hwang S, Na B, Moon J, Kim JG, Park H, Ryu JW. A 1.2 V 12.8 GB/s 2 Gb mobile wide-I/O DRAM with 4x128 I/Os using TSV based stacking. IEEE Journal of Solid-State Circuits. 2011 Sep 23;47(1):107-16.
 
 [2] Lee DU, Kim KW, Kim KW, Lee KS, Byeon SJ, Kim JH, Cho JH, Lee J, Chun JH. A 1.2 V 8 Gb 8-channel 128 GB/s high-bandwidth memory (HBM) stacked DRAM with effective I/O test circuits. IEEE Journal of Solid-State Circuits. 2014 Oct 14;50(1):191-203.
+
+[3] Sohn K, Yun WJ, Oh R, Oh CS, Seo SY, Park MS, Shin DH, Jung WC, Shin SH, Ryu JM, Yu HS. A 1.2 V 20 nm 307 GB/s HBM DRAM with at-speed wafer-level IO test scheme and adaptive refresh considering temperature distribution. IEEE Journal of Solid-State Circuits. 2016 Sep 13;52(1):250-60.
+
+[4] Kim S, Kim S, Cho K, Shin T, Park H, Lho D, Park S, Son K, Park G, Kim J. Processing-in-memory in high bandwidth memory (PIM-HBM) architecture with energy-efficient and low latency channels for high bandwidth system. In2019 IEEE 28th Conference on Electrical Performance of Electronic Packaging and Systems (EPEPS) 2019 Oct 6 (pp. 1-3). IEEE.
+
+[5] NVIDIA, Tesla. "V100 GPU architecture." (2017) ([link](https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf)).
 
 # Definitions:
 - TSV: In electronic engineering, a through-silicon via (TSV) or through-chip via is a vertical electrical connection (via) that passes completely through a silicon wafer or die.
