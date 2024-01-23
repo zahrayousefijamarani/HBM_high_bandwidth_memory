@@ -115,6 +115,11 @@ stable bit-cell operation
 
  <img width="408" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/5d1d85f5-bea1-40c8-b795-6b5b3db0350a">
 
+Can access through this [link](https://media-www.micron.com/-/media/client/global/documents/products/data-sheet/dram/hbm2e/8gb_and_16gb_hbm2e_dram.pdf):
+
+<img width="469" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/f8764ee2-c4c0-484e-b870-09c7f620e48c">
+
+
 ## Paper FIM-DRAM [7]:
 
 ### problems:
@@ -155,6 +160,34 @@ Further increase in off-chip bandwidth is often limited by power constraints.
 
   <img width="560" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/91ac79d1-46ab-4647-b980-eebed45e7834">
 
+
+## Paper HBM3 [8]:
+### Problem:
+ It is notable that, despite the thousandfold increase in the system-level performance during the defined decade, the increase rate of memory was limited to 125x over the same course of time.
+<img width="511" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/2d3c08e3-0d32-4857-a128-bb4f852e8e72">
+
+### Architecture:
+-  12-high die stack and 16 independent channels.
+-  The proposed architecture includes **four channels per core** die with **four slices** forming a single unit **rank**, or a total of 12 slices corresponding
+to three ranks.
+- A unit channel is subdivided into two pseudo-channels where each pseudo-channel consists of four bank-grouped 16 banks with 160-Mb density, including 16 Mb of parity cells for ECC and 8 Mb of metadata cells for a system-level reliability check.
+- Each bank group has 272 dedicated I/O lines, and four sets of BK IOs share two sets of global lines located in the TSV area with time-division multiplexing.
+
+<img width="945" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/68a53556-5977-488e-9a48-4923a21b6601">
+
+
+<img width="933" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/2ee5b2f2-fca8-4ebd-971b-82ef83279e54">
+
+## Paper HBM3 [9]:
+### Problem:
+performance and reliability
+
+### Architecture: 
+
+<img width="507" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/161af0a1-ab02-4b12-a12f-a86fb2e10224">
+
+<img width="700" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/cf57ebf8-de6a-492c-8bfb-63605144de3f">
+
  
 # Refrences:
 [1] Kim JS, Oh CS, Lee H, Lee D, Hwang HR, Hwang S, Na B, Moon J, Kim JG, Park H, Ryu JW. A 1.2 V 12.8 GB/s 2 Gb mobile wide-I/O DRAM with 4x128 I/Os using TSV based stacking. IEEE Journal of Solid-State Circuits. 2011 Sep 23;47(1):107-16.
@@ -170,6 +203,10 @@ Further increase in off-chip bandwidth is often limited by power constraints.
 [6] Oh CS, Chun KC, Byun YY, Kim YK, Kim SY, Ryu Y, Park J, Kim S, Cha S, Shin D, Lee J. 22.1 A 1.1 V 16GB 640GB/s HBM2E DRAM with a data-bus window-extension technique and a synergetic on-die ECC scheme. In2020 IEEE International Solid-State Circuits Conference-(ISSCC) 2020 Feb 16 (pp. 330-332). IEEE.
 
 [7] Oh CS, Chun KC, Byun YY, Kim YK, Kim SY, Ryu Y, Park J, Kim S, Cha S, Shin D, Lee J. 22.1 A 1.1 V 16GB 640GB/s HBM2E DRAM with a data-bus window-extension technique and a synergetic on-die ECC scheme. In2020 IEEE International Solid-State Circuits Conference-(ISSCC) 2020 Feb 16 (pp. 330-332). IEEE.
+
+[8] Park MJ, Lee J, Cho K, Park J, Moon J, Lee SH, Kim TK, Oh S, Choi S, Choi Y, Cho HS. A 192-Gb 12-high 896-Gb/s HBM3 DRAM with a TSV auto-calibration scheme and machine-learning-based layout optimization. IEEE Journal of Solid-State Circuits. 2022 Aug 17;58(1):256-69.
+
+[9] Ryu Y, Ahn SG, Lee JH, Park J, Kim YK, Kim H, Song YG, Cho HW, Cho S, Song SH, Lee H. A 16 GB 1024 GB/s HBM3 DRAM With Source-Synchronized Bus Design and On-Die Error Control Scheme for Enhanced RAS Features. IEEE Journal of Solid-State Circuits. 2023 Jan 4;58(4):1051-61.
 
 # Definitions:
 - TSV: In electronic engineering, a through-silicon via (TSV) or through-chip via is a vertical electrical connection (via) that passes completely through a silicon wafer or die.
