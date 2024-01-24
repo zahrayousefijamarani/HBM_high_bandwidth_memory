@@ -23,6 +23,8 @@ as CA[0:6] and each channel has 46x6 microbump:
 As the image below is showing DQ0 to DQ127 is connected through bump.
   <img width="764" alt="image" src="https://github.com/zahrayousefijamarani/HBM_high_bandwidth_memory/assets/45602698/2e0affdb-dbb5-484d-9203-b4708b756a52">
 
+First standard of HBM ([link](https://docplayer.net/57769517-Jedec-standard-high-bandwidth-memory-hbm-dram-jesd235-jedec-solid-state-technology-association-october-2013.html))
+
 ## Paper HBM-DRAM [2]:  
 ### problems:
 One of the major obstacles is the testability. Due to small diameter, it is very difficult to directly test the microbump. 
